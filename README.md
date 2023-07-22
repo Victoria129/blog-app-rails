@@ -1,35 +1,47 @@
-BLOG APP
-📗 Table of Contents
-📖 About the Project
-🛠 Built With
-Tech Stack
-Key Features
-💻 Getting Started
-Setup
-Prerequisites
-Usage
-Deployment
-👥 Authors
-🔭 Future Features
-🤝 Contributing
-⭐️ Show your support
-🙏 Acknowledgements
-📝 License
-📖 [BLOG APP]
-[Rails Blog App] is a project based on Ruby on Rails in which the blog is to be created as a part of learning project.
+# 📗 Table of Contents
 
-🛠 Built With
-Tech Stack
-Server Side / Back-End
-Package, Library, Framework
-Key Features
-[Object Oriented Approach]
-[ORM]
-[Database Usage]
-(back to top)
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ (OPTIONAL)](#faq)
+- [📝 License](#license)
 
-💻 Getting Started
-Getting Started
+
+# 📖 [blog-app-rails] <a name="about-project"></a>
+
+This is a project based on Ruby on Rails in which the blog is to be created as a part of learning project.
+
+**[blog-app-rails]** is a project based on Ruby on Rails in which the blog is to be created as a part of learning project.
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+Ruby on Rails
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+## 💻 Getting Started <a name="getting-started"></a>
+
 This repository includes all the files related with the project.
 
 
@@ -40,41 +52,76 @@ In order to run this project you need:
 
 Github account
 Ruby on Rails
-Setup
-Clone this repository to your desired folder: https://github.com/Victoria129/rails-blog-app.git
 
-Usage
-To run the project, install Ruby on Rails and then run this program by copying into it.
+```sh
+ gem install rails
+```
 
-Deployment
-By following Usage steps, you will get a fully completed functional database.
+### Setup
 
-(back to top)
+Clone this repository to your desired folder: https://github.com/Victoria129/blog-app-rails.git### Prerequisites
 
-👥 Authors
-👤 Victoria Tumwebaze
+### Install
+
+Install this project with:
+
+```sh
+  cd my-project
+  gem install
+```
+
+### Usage
+
+To run the project, install Ruby on Rails and then run this program by running the below command.
+
+```sh
+  rails server
+```
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Victoria Tumwebaze**
 
 GitHub: https://github.com/Victoria129
 LinkedIn: https://www.linkedin.com/in/victoria-tumwebaze
-(back to top)
 
-🔭 Future Features
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
 [Website Launch] [Designing UI]
 
-(back to top)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-🤝 Contributing
+
+## 🤝 Contributing <a name="contributing"></a>
+
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the issues page.
+Feel free to check the [issues page](https://github.com/Victoria129/blog-app-rails/issues).
 
-(back to top)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-⭐️ Show your support
-If you like this project please STAR it and give your valueable feedback.
 
-(back to top)
+## ⭐️ Show your support <a name="support"></a>
 
-🙏 Acknowledgments
+> Write a message to encourage readers to support your project
+
+If you like this project...
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
 I would like to thank microverse for providing me the opportunity to work on this project.
 And the Microverse community for the great collaboration.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
