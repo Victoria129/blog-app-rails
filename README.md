@@ -1,24 +1,80 @@
-# README
+BLOG APP
+📗 Table of Contents
+📖 About the Project
+🛠 Built With
+Tech Stack
+Key Features
+💻 Getting Started
+Setup
+Prerequisites
+Usage
+Deployment
+👥 Authors
+🔭 Future Features
+🤝 Contributing
+⭐️ Show your support
+🙏 Acknowledgements
+📝 License
+📖 [BLOG APP]
+[Rails Blog App] is a project based on Ruby on Rails in which the blog is to be created as a part of learning project.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+🛠 Built With
+Tech Stack
+Server Side / Back-End
+Package, Library, Framework
+Key Features
+[Object Oriented Approach]
+[ORM]
+[Database Usage]
+(back to top)
 
-Things you may want to cover:
+💻 Getting Started
+Getting Started
+This repository includes all the files related with the project.
 
-* Ruby version
 
-* System dependencies
+To get a local copy up and running, follow these steps.
 
-* Configuration
+Prerequisites
+In order to run this project you need:
 
-* Database creation
+Github account
+Ruby on Rails
+Setup
+Clone this repository to your desired folder: https://github.com/Victoria129/rails-blog-app.git
 
-* Database initialization
+Usage
+To run the project, install Ruby on Rails and then run this program by copying into it.
 
-* How to run the test suite
+Deployment
+By following Usage steps, you will get a fully completed functional database.
 
-* Services (job queues, cache servers, search engines, etc.)
+(back to top)
 
-* Deployment instructions
+👥 Authors
+👤 Victoria Tumwebaze
 
-* ...
+GitHub: https://github.com/Victoria129
+LinkedIn: https://www.linkedin.com/in/victoria-tumwebaze
+(back to top)
+
+🔭 Future Features
+[Website Launch] [Designing UI]
+
+(back to top)
+
+🤝 Contributing
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the issues page.
+
+(back to top)
+
+⭐️ Show your support
+If you like this project please STAR it and give your valueable feedback.
+
+(back to top)
+
+🙏 Acknowledgments
+I would like to thank microverse for providing me the opportunity to work on this project.
+And the Microverse community for the great collaboration.
