@@ -10,8 +10,8 @@ RSpec.describe User, type: :model do
     end
 
     it 'posts counter should be an integer and greater than or equal to zero' do
-      expect(subject.posts_counter).to be_a(Integer)
-      expect(subject.posts_counter).to be >= 0
+      expect(subject.postsCounter).to be_a(Integer)
+      expect(subject.postsCounter).to be >= 0
     end
 
     it 'return return_three_most_recent_posts' do
@@ -27,7 +27,7 @@ RSpec.describe User, type: :model do
     end
 
     it 'posts counter should be equal to 0' do
-      expect(user.posts_counter).to eq(0)
+      expect(user.postsCounter).to eq(0)
     end
   end
 end
