@@ -1,5 +1,3 @@
-<h3>Post Details</h3>
-
 <% author = User.find(@post.author_id) %>
 
 <h1>Post <%= '&#35;'.html_safe %> <%=@post.id %>  by <%= author.name %></h1>
@@ -16,10 +14,14 @@
 
 <%= @post.text %>
 
-@@ -13,5 +21,11 @@
-    <%= comment.user.name %>: <%= comment.text %>
+<h2>Comments</h2>
+<ul>
+  <% @post.comments.each do |comment| %>
+    <li>
+    <%= comment.author.name %>: <%= comment.text %>
     </li>
   <% end %>
+
   <%= form_with(model: @comment, url: post_comments_path(@post)) do |form| %>
       <%= form.label :text, 'Comment' %>
       <%= form.text_area :text, placeholder: 'Enter your comment...', required: true %>

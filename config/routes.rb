@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'comments/new'
+  get 'comments/create'
+  get 'likes/new'
+  get 'likes/create'
   root "users#index"
 
   resources :users, only: [:index, :show] do
@@ -10,3 +14,4 @@ Rails.application.routes.draw do
     resources :likes, only: [:create]
   end
 end
+
