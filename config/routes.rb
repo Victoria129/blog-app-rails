@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
-  resources :users, only: %i[index show] do
-    resources :posts, only: %i[index show]
-  # get 'posts/index'
+  root "users#index"
+
+  resources :users, only: [:index, :show] do
+    resources :posts, only: [:index, :show, :new, :create]
   end
-  # resources :users, only: [:show]
+
+  resources :posts do
+    resources :comments, only: [:new, :create]
+    resources :likes, only: [:create]
+  end
 end
