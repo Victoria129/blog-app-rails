@@ -4,8 +4,8 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[show like]
 
   def index
-    @posts = Post.all
     @user = User.find_by(params[:id])
+    @posts = Post.includes(comments: [:author]).where(author_id: params[:user_id])
   end
 
   def new
