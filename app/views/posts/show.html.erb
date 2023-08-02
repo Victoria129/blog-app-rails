@@ -1,30 +1,16 @@
-<% author = User.find(@post.author_id) %>
+<h1>Blog App</h1>
 
-<h1>Post <%= '&#35;'.html_safe %> <%=@post.id %>  by <%= author.name %></h1>
-<p>Likes: <%= @post.likes_counter %></p>
-
-<p>Comments: <%= @post.comments_counter %></p>
-<%= link_to post_likes_path(@post.author_id, @post.id) do %>
-  <p><%= "Likes: #{@post.likes_counter}" %></p>
+<main class='user-cont2'>
+  <div class="post-in-show">
+    <div class="post-in-show2">
+      <h3><%= @post.title %> by <%= @post.author.name %></h3>
+      <p>Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %></p>
+    </div>
+    <p><%= @post.text %></p>
+  </div>
+  <div class="comment-container">
+    <% @post.comments.each do |comment| %>
+      <%= render 'partials/comment', comment: comment %>
     <% end %>
-  <%= form_with url: post_likes_path(@post.author_id, @post.id) do |form| %>
-   <a><%= form.submit 'Like' %></a>
-  <% end %>
-</div>
-
-<%= @post.text %>
-
-<h2>Comments</h2>
-<ul>
-  <% @post.comments.each do |comment| %>
-    <li>
-    <%= comment.author.name %>: <%= comment.text %>
-    </li>
-  <% end %>
-
-  <%= form_with(model: @comment, url: post_comments_path(@post)) do |form| %>
-      <%= form.label :text, 'Comment' %>
-      <%= form.text_area :text, placeholder: 'Enter your comment...', required: true %>
-      <%= form.submit 'Create Comment', class: 'submit-button' %>
-    <% end %>
-</ul>
+  </div>
+</main>

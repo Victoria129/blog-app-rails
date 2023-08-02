@@ -1,4 +1,4 @@
-# : true
+: true
 
 require 'rails_helper'
 

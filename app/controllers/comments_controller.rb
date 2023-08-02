@@ -1,26 +1,27 @@
-# : true
-
 class CommentsController < ApplicationController
-  before_action :set_post, only: %i[new create]
-
   def new
+    @user = current_user
+    @post = Post.find(params[:post_id])
     @comment = Comment.new
   end
 
   def create
-    @comment = Comment.new(
-      user_id: current_user.id,
-      post_id: @post.id,
-      text: params[:text]
-    )
-    return unless @comment.save
-
-    redirect_to user_post_path(@comment.user.id, @post.id)
+    @user = current_user
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.new(comment_params)
+    @comment.author = @user
+    if @comment.save
+      flash[:success] = 'Comment created successfully'
+      redirect_to user_post_path(@user, @post)
+    else
+      flash.now[:errors] = 'Error: Comment could not be saved'
+      render :new
+    end
   end
 
   private
 
-  def set_post
-    @post = Post.find(params[:post_id])
+  def comment_params
+    params.require(:comment).permit(:text)
   end
 end

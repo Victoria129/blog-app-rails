@@ -1,32 +1,23 @@
-<h3>This is a list of posts for a given usser</h3>
+<h1>Blog App Rails</h1>
 
-<% if @user %>
-  <h1>User: <%= @user.name %></h1>
-  <p>Number of Posts: <%= @user.posts_counter %></p>
+<%= render 'partials/user', user: @user %>
+<main class="post-index">
+  <% @posts.reverse_each do |post| %>
+    <div class="post-details">
+      <%= render 'partials/post', post: post %>
 
+      <div>
+        <%= link_to "Add Comment", new_user_post_comment_path(@user, post), class: 'add_comment' %>
+        <%= form_with url: user_post_likes_path(post.author.id, post.id) do |form| %>
+          <%= form.submit 'Like', class: 'like_btn' %>
+        <% end %>
+      </div>
 
-  <h1>All Posts</h1>
-  <ul>
-    <% @posts.each do |post| %>
-      <li>
-        <a href="<%= user_post_path(post.author, post) %>">
-          <%= post.title %>
-        </a>
-        <br>
-        Number of Comments: <%= post.comments_counter %>
-        <br>
-        Number of Likes: <%= post.likes_counter %>
-
-        <ul>
-          <% post.return_five_most_recent_comments do |comment| %>
-            <li>
-            <%= comment.user.name %>: <%= comment.text %>
-            </li>
-          <% end %>
-        </ul>
-      </li>
-    <% end %>
-  </ul>
-<% else %>
-  <p>User not found.</p>
-<% end %>
+      <div class="comment-container">
+        <% post.return_five_most_recent_comments.reverse_each do |comment| %>
+          <%= render 'partials/comment', comment: comment %>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</main>
