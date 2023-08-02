@@ -1,2 +1,4 @@
+# : true
+
 module PostsHelper
 end

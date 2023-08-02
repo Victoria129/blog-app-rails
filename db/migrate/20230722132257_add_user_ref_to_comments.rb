@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# : true
 
 class AddUserRefToComments < ActiveRecord::Migration[7.0]
   def change
