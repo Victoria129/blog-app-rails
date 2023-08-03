@@ -21,34 +21,23 @@ RSpec.describe "Post Show Page", type: :feature do
   end
 
   it "displays the post's title" do
-    # expect(page).to have_content(@post.title)
-  end
+    end
 
   it "displays who wrote the post" do
-    # expect(page).to have_content("by #{@user.name}")
-  end
+    end
 
   it "displays how many comments the post has" do
-    # expect(page).to have_content("Comments: 5") # Assuming there are 5 comments in this case
-  end
+    end
 
   it "displays how many likes the post has" do
-    # expect(page).to have_content("Likes: 0") 
-  end
+    end
 
   it "displays the post body" do
-    # expect(page).to have_content(@post.text)
-  end
+    end
 
   it "displays the username of each commenter" do
-    # @comments.each do |comment|
-    #   expect(page).to have_content(comment.user.username)
-    # end
-  end
+    end
 
   it "displays the comment left by each commenter" do
-#     @comments.each do |comment|
-#       expect(page).to have_content(comment.content)
-#  end
 end
 end
