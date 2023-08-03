@@ -1,23 +1,5 @@
-# : true
-
 RSpec.describe 'User Post Index Page', type: :feature do
   before do
-    # # Manually create sample user with profile picture, username, and posts
-    # @user = User.create(
-    #   username: "testuser",
-    #   profile_picture_url: "path/to/profile_picture.png",
-    # )
-
-    # # Manually create sample posts for the user
-    # @posts = []
-    # 10.times do |i|
-    #   @posts << @user.posts.create(
-    #     title: "Post #{i+1}",
-    #     body: "This is the body of Post #{i+1}."
-    #   )
-    # end
-
-    # visit user_posts_path(@user)
   end
 
   it "displays the user's profile picture" do

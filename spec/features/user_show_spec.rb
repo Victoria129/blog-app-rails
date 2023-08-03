@@ -1,24 +1,5 @@
-# : true
-
 RSpec.describe 'User Show Page', type: :feature do
   before do
-    # # Manually create sample user with profile picture, username, posts, and bio
-    # @user = User.create(
-    #   username: "testuser",
-    #   profile_picture_url: "path/to/profile_picture.png",
-    #   bio: "This is a test user's bio."
-    # )
-
-    # # Manually create sample posts for the user
-    # @posts = []
-    # 5.times do |i|
-    #   @posts << @user.posts.create(
-    #     title: "Post #{i+1}",
-    #     content: "This is the content of Post #{i+1}."
-    #   )
-    # end
-
-    # visit user_path(@user)
   end
 
   it "displays the user's profile picture" do
