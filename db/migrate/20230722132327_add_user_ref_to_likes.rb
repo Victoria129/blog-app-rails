@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # : true
 
 class AddUserRefToLikes < ActiveRecord::Migration[7.0]

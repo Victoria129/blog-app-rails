@@ -1,4 +1,6 @@
-RSpec.describe "User Show Page", type: :feature do
+# frozen_string_literal: true
+
+RSpec.describe 'User Show Page', type: :feature do
   before do
     # # Manually create sample user with profile picture, username, posts, and bio
     # @user = User.create(
@@ -20,13 +22,13 @@ RSpec.describe "User Show Page", type: :feature do
   end
 
   it "displays the user's profile picture" do
-   end
+  end
 
   it "displays the user's username" do
-   end
+  end
 
-  it "displays the number of posts the user has written" do
-   end
+  it 'displays the number of posts the user has written' do
+  end
 
   it "displays the user's bio" do
   end
