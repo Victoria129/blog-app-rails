@@ -1,10 +1,12 @@
 # : true
 
+# : true
+
 class PostsController < ApplicationController
   before_action :set_post, only: %i[show like]
 
   def index
-    @posts = Post.all
+    @posts = Post.includes(comments: [:author]).where(author_id: params[:user_id])
     @user = User.find_by(params[:id])
   end
 

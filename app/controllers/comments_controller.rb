@@ -1,5 +1,7 @@
 # : true
 
+# : true
+
 class CommentsController < ApplicationController
   before_action :set_post, only: %i[new create]
 
