@@ -33,7 +33,7 @@ RSpec.describe "Post Show Page", type: :feature do
   end
 
   it "displays how many likes the post has" do
-    # expect(page).to have_content("Likes: 0") # Assuming there are 0 likes in this case
+    # expect(page).to have_content("Likes: 0") 
   end
 
   it "displays the post body" do
