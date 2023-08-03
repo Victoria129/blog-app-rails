@@ -1,4 +1,4 @@
-# frozen_string_literal: true
+# : true
 
 RSpec.describe 'User Show Page', type: :feature do
   before do
