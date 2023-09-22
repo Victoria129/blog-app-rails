@@ -84,9 +84,8 @@ To run the project, install Ruby on Rails and then run this program by running t
 
 - GitHub: https://github.com/Victoria129
 - LinkedIn: https://www.linkedin.com/in/victoria-tumwebaze
-
+- 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## 🔭 Future Features <a name="future-features"></a>
 
 [Website Launch] [Designing UI]
