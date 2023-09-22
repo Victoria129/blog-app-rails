@@ -82,14 +82,8 @@ To run the project, install Ruby on Rails and then run this program by running t
 
 👤 **Victoria Tumwebaze**
 
-GitHub: https://github.com/Victoria129
-LinkedIn: https://www.linkedin.com/in/victoria-tumwebaze
-
-👤 **Tom Daniel**
-
-- GitHub: [@tomdan-ai](https://github.com/tomdan-ai)
-- Twitter: [@kvngWebstar](https://twitter.com/tomudoh1)
-- LinkedIn : [Tom Udoh](https://linkedin.com/in/tomudoh)
+- GitHub: https://github.com/Victoria129
+- LinkedIn: https://www.linkedin.com/in/victoria-tumwebaze
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
