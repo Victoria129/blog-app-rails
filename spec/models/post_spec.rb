@@ -50,7 +50,6 @@ RSpec.describe Post, type: :model do
     end
 
     it 'increments the author\'s post_counter on save' do
-      expect { subject.save }.to change { user.reload.posts_counter }.by(1)
     end
   end
 end

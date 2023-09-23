@@ -113,7 +113,7 @@ If you like this project...
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank microverse for providing me the opportunity to work on this project.
+I would like to thank Microverse for giving me the opportunity to work on this project.
 And the Microverse community for the great collaboration.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
