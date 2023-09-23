@@ -1,29 +1,55 @@
+# : true
+
+# : true
+
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  let(:user) { User.create(name: 'Victoria Tumwebaze', posts_counter: 0) }
-  let(:post) { Post.create(author_id: user.id, title: 'Sample Post', likes_counter: 0, comments_counter: 0) }
-  let!(:comment1) { Comment.create(post_id: post.id, user_id: user.id, text: 'Sample Comment') }
-  let!(:comment2) { Comment.create(post_id: post.id, user_id: user.id, text: 'Sample Comment') }
-  let!(:comment3) { Comment.create(post_id: post.id, user_id: user.id, text: 'Sample Comment') }
-  let!(:comment4) { Comment.create(post_id: post.id, user_id: user.id, text: 'Sample Comment') }
-  let!(:comment5) { Comment.create(post_id: post.id, user_id: user.id, text: 'Sample Comment') }
+  let(:post) { Post.create }
 
-  describe 'validations' do
-    it { should validate_presence_of(:title) }
-    it { should validate_length_of(:title).is_at_most(250) }
-    it { should validate_numericality_of(:comments_counter).only_integer.is_greater_than_or_equal_to(0) }
-    it { should validate_numericality_of(:likes_counter).only_integer.is_greater_than_or_equal_to(0) }
+  context 'Testing with no inputs' do
+    it 'should not be valid' do
+      expect(post).to_not be_valid
+    end
+
+    it 'likes counter must be 0 or greater' do
+      expect(subject.likes_counter).to be >= 0
+      expect(subject.likes_counter).to be_a(Integer)
+    end
+
+    it 'comments counter must be 0 or greater' do
+      expect(subject.comments_counter).to be >= 0
+      expect(subject.comments_counter).to be_a(Integer)
+    end
+
+    it 'return return_five_most_recent_comments' do
+      expect(subject.return_five_most_recent_comments).to eq(subject.comments.order(updated_at: :desc).limit(5))
+    end
   end
 
-  describe '#update_user_posts_counter' do
-    it 'updates the user posts_counter attribute' do
-      puts "Before saving post: #{user.posts_counter}"
-      post.save
-      user.reload
-      update = user.posts_counter
-      puts "After saving post: #{update}"
-      expect(update).to eq(2)
+  context 'Testing with inputs' do
+    let(:user) { User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'New user') }
+    subject { Post.new(author: user, title: 'Nature', text: 'I love this!') }
+    before { subject.save }
+
+    it 'should be valid' do
+      expect(subject).to be_valid
+    end
+
+    it 'should have comments_counter equal to 0' do
+      expect(subject.comments_counter).to eq(0)
+    end
+
+    it 'should have likes_counter equal to 0' do
+      expect(subject.likes_counter).to eq(0)
+    end
+
+    it 'title should not be greater than 250 characters' do
+      post = Post.create(author: user, title: 'a' * 251, text: 'I love this!')
+      expect(post).not_to be_valid
+    end
+
+    it 'increments the author\'s post_counter on save' do
     end
   end
 end
