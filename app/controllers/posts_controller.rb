@@ -1,5 +1,4 @@
 # : true
-
 # : true
 
 class PostsController < ApplicationController
